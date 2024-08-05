@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/pages/add_page.dart';
+import 'package:gym_app/pages/favorites_page.dart';
+import 'package:gym_app/pages/home_page.dart';
+import 'package:gym_app/pages/profile_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
@@ -13,6 +17,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int cindex = 0;
+
+  final List<Widget> pages = [
+    const HomePage(),
+    const AddPage(),
+    const FavoritesPage(),
+    const ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +58,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
         ),
+        body: pages[cindex],
       ),
     );
   }
