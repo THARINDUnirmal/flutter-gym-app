@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,14 +11,19 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    DateFormat formatDay = DateFormat("EEEE,MMMM,dd");
+
+    String toDay = formatDay.format(
+      DateTime.now(),
+    );
+    return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
               Text(
-                "Home Page",
-                style: TextStyle(
+                toDay,
+                style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w700,
                 ),
