@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/pages/utils/colors.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
@@ -11,7 +12,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    DateFormat formatDay = DateFormat("EEEE,MMMM,dd");
+    DateFormat formatDay = DateFormat("EEEE, MMMM dd");
 
     String toDay = formatDay.format(
       DateTime.now(),
@@ -20,14 +21,24 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 toDay,
                 style: const TextStyle(
-                  fontSize: 25,
+                  fontSize: 20,
                   fontWeight: FontWeight.w700,
+                  color: subTopicColor,
                 ),
-              )
+              ),
+              const Text(
+                "Hello, Kate",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  color: mainTopicColor,
+                ),
+              ),
             ],
           ),
         ),
