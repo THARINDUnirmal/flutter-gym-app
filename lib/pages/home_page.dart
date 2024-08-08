@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/pages/utils/colors.dart';
 import 'package:intl/intl.dart';
 
@@ -10,6 +11,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  //User Data
+  final userData = user;
+
   @override
   Widget build(BuildContext context) {
     DateFormat formatDay = DateFormat("EEEE, MMMM dd");
@@ -31,8 +35,8 @@ class _HomePageState extends State<HomePage> {
                   color: subTopicColor,
                 ),
               ),
-              const Text(
-                "Hello, Kate",
+              Text(
+                userData.fullName,
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.w900,
