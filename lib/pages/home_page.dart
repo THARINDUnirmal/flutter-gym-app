@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/widgets/progress_card.dart';
 import 'package:intl/intl.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,28 +23,38 @@ class _HomePageState extends State<HomePage> {
       DateTime.now(),
     );
     return Scaffold(
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                toDay,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: subTopicColor,
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  toDay,
+                  style: const TextStyle(
+                    fontSize: 17,
+                    fontWeight: FontWeight.w700,
+                    color: ksubTopicColor,
+                  ),
                 ),
-              ),
-              Text(
-                userData.fullName,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
-                  color: mainTopicColor,
+                Text(
+                  userData.fullName,
+                  style: const TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.w900,
+                    color: kmainTopicColor,
+                  ),
                 ),
-              ),
-            ],
+                SizedBox(
+                  height: 20,
+                ),
+                ProgressCard(
+                  total: 100,
+                  progress: 0.6,
+                ),
+              ],
+            ),
           ),
         ),
       ),
