@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/widgets/navigation_card.dart';
 import 'package:gym_app/widgets/progress_card.dart';
 import 'package:intl/intl.dart';
 
@@ -39,20 +40,66 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Text(
-                  userData.fullName,
+                  "Helow, ${userData.fullName}",
                   style: const TextStyle(
                     fontSize: 35,
                     fontWeight: FontWeight.w900,
                     color: kmainTopicColor,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                ProgressCard(
+                const ProgressCard(
                   total: 100,
                   progress: 0.6,
                 ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Today’s Activity",
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NavigationCard(
+                      title: "Warmup",
+                      imageUrl: "assets/images/exercises/cobra.png",
+                      description: "see more...",
+                    ),
+                    NavigationCard(
+                      title: "Equipment",
+                      imageUrl: "assets/images/equipments/dumbbells2.png",
+                      description: "see more...",
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    NavigationCard(
+                      title: "Exercise",
+                      imageUrl: "assets/images/exercises/weightlifting.png",
+                      description: "see more...",
+                    ),
+                    NavigationCard(
+                      title: "Stretching",
+                      imageUrl: "assets/images/exercises/yoga.png",
+                      description: "see more...",
+                    )
+                  ],
+                )
               ],
             ),
           ),

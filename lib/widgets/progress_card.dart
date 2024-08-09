@@ -47,7 +47,7 @@ class _ProgressCardState extends State<ProgressCard> {
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 40,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
