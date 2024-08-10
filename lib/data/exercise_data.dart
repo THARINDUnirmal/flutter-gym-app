@@ -70,5 +70,5 @@ final List<ExerciseModle> exercises = [
     noOfMinuites: 15,
     id: 9,
     completed: false,
-  )
+  ),
 ];

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/pages/utils/colors.dart';
 import 'package:gym_app/widgets/navigation_card.dart';
@@ -15,6 +16,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //User Data
   final userData = user;
+
+  //exercises data
+  final exData = exercises;
 
   @override
   Widget build(BuildContext context) {
@@ -97,9 +101,12 @@ class _HomePageState extends State<HomePage> {
                       title: "Stretching",
                       imageUrl: "assets/images/exercises/yoga.png",
                       description: "see more...",
-                    )
+                    ),
                   ],
-                )
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ),

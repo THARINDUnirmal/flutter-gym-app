@@ -18,6 +18,13 @@ class NavigationCard extends StatelessWidget {
     return Container(
       width: 190,
       decoration: BoxDecoration(
+        boxShadow: const [
+          BoxShadow(
+            offset: Offset(1, 2),
+            color: Colors.black54,
+            blurStyle: BlurStyle.normal,
+          ),
+        ],
         borderRadius: BorderRadius.circular(20),
         color: knavCardBgColor,
       ),
@@ -51,6 +58,9 @@ class NavigationCard extends StatelessWidget {
               fontWeight: FontWeight.w600,
               color: knavCardDescTextColor,
             ),
+          ),
+          const SizedBox(
+            height: 15,
           ),
         ],
       ),
