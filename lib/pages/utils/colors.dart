@@ -10,3 +10,5 @@ const Color kmainWhiteColor = Color(0xffffffff);
 
 const Color knavCardBgColor = Color.fromARGB(255, 229, 223, 223);
 const Color knavCardDescTextColor = Color(0xff0193FC);
+
+final Color kpageDescTextColor = const Color(0xff3B3636).withOpacity(0.75);

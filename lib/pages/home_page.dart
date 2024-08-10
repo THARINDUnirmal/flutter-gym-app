@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
+import 'package:gym_app/pages/exercises_page.dart';
 import 'package:gym_app/pages/utils/colors.dart';
 import 'package:gym_app/widgets/navigation_card.dart';
 import 'package:gym_app/widgets/progress_card.dart';
@@ -71,15 +72,29 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    NavigationCard(
-                      title: "Warmup",
-                      imageUrl: "assets/images/exercises/cobra.png",
-                      description: "see more...",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExercisesPage(
+                                pageTitle: "Warmups",
+                                pageDescription:
+                                    "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                                exList: exercises),
+                          ),
+                        );
+                      },
+                      child: const NavigationCard(
+                        title: "Warmup",
+                        imageUrl: "assets/images/exercises/cobra.png",
+                        description: "see more...",
+                      ),
                     ),
-                    NavigationCard(
+                    const NavigationCard(
                       title: "Equipment",
                       imageUrl: "assets/images/equipments/dumbbells2.png",
                       description: "see more...",
@@ -89,18 +104,46 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    NavigationCard(
-                      title: "Exercise",
-                      imageUrl: "assets/images/exercises/weightlifting.png",
-                      description: "see more...",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExercisesPage(
+                                pageTitle: "Exercise",
+                                pageDescription:
+                                    "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                                exList: exercises),
+                          ),
+                        );
+                      },
+                      child: const NavigationCard(
+                        title: "Exercise",
+                        imageUrl: "assets/images/exercises/weightlifting.png",
+                        description: "see more...",
+                      ),
                     ),
-                    NavigationCard(
-                      title: "Stretching",
-                      imageUrl: "assets/images/exercises/yoga.png",
-                      description: "see more...",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ExercisesPage(
+                                pageTitle: "Stretching",
+                                pageDescription:
+                                    "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                                exList: exercises),
+                          ),
+                        );
+                      },
+                      child: const NavigationCard(
+                        title: "Stretching",
+                        imageUrl: "assets/images/exercises/yoga.png",
+                        description: "see more...",
+                      ),
                     ),
                   ],
                 ),

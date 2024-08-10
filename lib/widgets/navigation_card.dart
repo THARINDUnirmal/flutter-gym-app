@@ -54,7 +54,7 @@ class NavigationCard extends StatelessWidget {
           Text(
             description,
             style: const TextStyle(
-              fontSize: 17,
+              fontSize: 16,
               fontWeight: FontWeight.w600,
               color: knavCardDescTextColor,
             ),
