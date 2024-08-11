@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/modles/exercise_modle.dart';
-import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/utils/colors.dart';
 import 'package:gym_app/widgets/navigation_card.dart';
 import 'package:intl/intl.dart';
 

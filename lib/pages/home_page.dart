@@ -4,7 +4,7 @@ import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/pages/equipment_page.dart';
 import 'package:gym_app/pages/exercises_page.dart';
-import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/utils/colors.dart';
 import 'package:gym_app/widgets/navigation_card.dart';
 import 'package:gym_app/widgets/progress_card.dart';
 import 'package:intl/intl.dart';

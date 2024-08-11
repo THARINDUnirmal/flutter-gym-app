@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/utils/colors.dart';
 
 class EquipmentCard extends StatelessWidget {
   final String equipmentCardTitle;

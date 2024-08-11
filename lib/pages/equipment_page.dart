@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gym_app/data/equipment_data.dart';
 import 'package:gym_app/modles/equipment_modle.dart';
-import 'package:gym_app/pages/utils/colors.dart';
+import 'package:gym_app/utils/colors.dart';
 import 'package:gym_app/widgets/equipment_card.dart';
 import 'package:intl/intl.dart';
 
