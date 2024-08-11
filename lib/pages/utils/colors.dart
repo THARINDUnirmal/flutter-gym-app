@@ -13,5 +13,5 @@ const Color knavCardDescTextColor = Color(0xff0193FC);
 
 final Color kpageDescTextColor = const Color(0xff3B3636).withOpacity(0.75);
 
-const Color kEquipmentCardFilltColor = Color(0xffF5F5F5);
+const Color kEquipmentCardFilltColor = Color.fromARGB(56, 176, 169, 169);
 const Color kEquipmentCardBlueTextColor = Color(0xff0193FC);
