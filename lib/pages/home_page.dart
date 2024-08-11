@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/data/equipment_data.dart';
 import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
+import 'package:gym_app/pages/equipment_page.dart';
 import 'package:gym_app/pages/exercises_page.dart';
 import 'package:gym_app/pages/utils/colors.dart';
 import 'package:gym_app/widgets/navigation_card.dart';
@@ -94,10 +96,25 @@ class _HomePageState extends State<HomePage> {
                         description: "see more...",
                       ),
                     ),
-                    const NavigationCard(
-                      title: "Equipment",
-                      imageUrl: "assets/images/equipments/dumbbells2.png",
-                      description: "see more...",
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EquipmentPage(
+                              title: "Equipment",
+                              description:
+                                  "Welcome to our travel app, your ultimate guide to discovering captivating destinations around the globe! Whether you're seeking the tranquility visit offers something for every traveler.",
+                              equipmentList: equipmentList,
+                            ),
+                          ),
+                        );
+                      },
+                      child: const NavigationCard(
+                        title: "Equipment",
+                        imageUrl: "assets/images/equipments/dumbbells2.png",
+                        description: "see more...",
+                      ),
                     )
                   ],
                 ),
