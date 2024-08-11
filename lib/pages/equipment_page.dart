@@ -73,12 +73,11 @@ class _EquipmentPageState extends State<EquipmentPage> {
                 physics: const NeverScrollableScrollPhysics(),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 1,
-                    crossAxisSpacing: 10,
                     mainAxisSpacing: 10,
                     childAspectRatio: (15 / 14)),
                 itemCount: equipmentList.length,
                 itemBuilder: (context, index) {
-                  dynamic eData = equipmentList[index];
+                  EquipmentModle eData = equipmentList[index];
                   return EquipmentCard(
                     equipmentCardTitle: eData.equipmentName,
                     equipmentImageUrl: eData.equipmentImageUrl,
