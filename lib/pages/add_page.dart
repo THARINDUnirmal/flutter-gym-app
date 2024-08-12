@@ -68,7 +68,11 @@ class _AddPageState extends State<AddPage> {
                         return AddExerciseCard(
                           addMethord: () {
                             setState(() {
-                              user.addExercise(exerciseData);
+                              if (user.exerciseList.contains(exerciseData)) {
+                                user.removeExercise(exerciseData);
+                              } else {
+                                user.addExercise(exerciseData);
+                              }
                             });
                           },
                           isAdded: user.exerciseList.contains(exerciseData),

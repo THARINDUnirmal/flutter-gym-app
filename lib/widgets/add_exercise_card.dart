@@ -68,17 +68,11 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                     onPressed: () {
                       widget.addMethord();
                     },
-                    icon: widget.isAdded
-                        ? const Icon(
-                            Icons.remove,
-                            size: 30,
-                            color: Colors.white,
-                          )
-                        : const Icon(
-                            Icons.add,
-                            size: 30,
-                            color: Colors.white,
-                          ),
+                    icon: Icon(
+                      widget.isAdded ? Icons.remove : Icons.add,
+                      size: 30,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
                 Container(

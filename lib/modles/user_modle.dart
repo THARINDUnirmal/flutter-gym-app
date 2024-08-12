@@ -35,4 +35,10 @@ class User {
   void addExercise(ExerciseModle exe) {
     exerciseList.add(exe);
   }
+
+  //methord remove data
+
+  void removeExercise(ExerciseModle exeReomove) {
+    exerciseList.remove(exeReomove);
+  }
 }
