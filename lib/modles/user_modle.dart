@@ -29,4 +29,10 @@ class User {
     required this.favExerciseList,
     required this.favEquipmentList,
   });
+
+  //methords add Exercise
+
+  void addExercise(ExerciseModle exe) {
+    exerciseList.add(exe);
+  }
 }

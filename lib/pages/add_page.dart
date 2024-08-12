@@ -57,7 +57,7 @@ class _AddPageState extends State<AddPage> {
                     height: 20,
                   ),
                   SizedBox(
-                    height: 245,
+                    height: 260,
                     child: ListView.builder(
                       physics: const AlwaysScrollableScrollPhysics(),
                       shrinkWrap: true,
@@ -66,6 +66,12 @@ class _AddPageState extends State<AddPage> {
                       itemBuilder: (context, index) {
                         ExerciseModle exerciseData = exercises[index];
                         return AddExerciseCard(
+                          addMethord: () {
+                            setState(() {
+                              user.addExercise(exerciseData);
+                            });
+                          },
+                          isAdded: user.exerciseList.contains(exerciseData),
                           cardTitle: exerciseData.exerciseName,
                           cardImageUrl: exerciseData.exerciseImageUrl,
                         );
