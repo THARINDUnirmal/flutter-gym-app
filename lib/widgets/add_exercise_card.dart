@@ -5,7 +5,9 @@ class AddExerciseCard extends StatefulWidget {
   final String cardTitle;
   final String cardImageUrl;
   final bool isAdded;
+  final bool isInFav;
   final void Function() addMethord;
+  final void Function() addFavourit;
 
   const AddExerciseCard({
     super.key,
@@ -13,6 +15,8 @@ class AddExerciseCard extends StatefulWidget {
     required this.cardImageUrl,
     required this.isAdded,
     required this.addMethord,
+    required this.addFavourit,
+    required this.isInFav,
   });
 
   @override
@@ -83,9 +87,11 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
                     color: const Color.fromARGB(56, 78, 79, 82),
                   ),
                   child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite_border,
+                    onPressed: () {
+                      widget.addFavourit();
+                    },
+                    icon: Icon(
+                      widget.isInFav ? Icons.favorite : Icons.favorite_border,
                       color: Colors.pink,
                       size: 30,
                     ),

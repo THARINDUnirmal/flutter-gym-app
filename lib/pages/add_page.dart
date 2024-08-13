@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gym_app/data/exercise_data.dart';
 import 'package:gym_app/data/user_data.dart';
 import 'package:gym_app/modles/exercise_modle.dart';
+import 'package:gym_app/modles/user_modle.dart';
 import 'package:gym_app/utils/colors.dart';
 import 'package:gym_app/widgets/add_exercise_card.dart';
 
@@ -66,6 +67,16 @@ class _AddPageState extends State<AddPage> {
                       itemBuilder: (context, index) {
                         ExerciseModle exerciseData = exercises[index];
                         return AddExerciseCard(
+                          addFavourit: () {
+                            setState(() {
+                              if (user.favouritExerciseList
+                                  .contains(exerciseData)) {
+                                user.removeFavourit(exerciseData);
+                              } else {
+                                user.addFavourit(exerciseData);
+                              }
+                            });
+                          },
                           addMethord: () {
                             setState(() {
                               if (user.exerciseList.contains(exerciseData)) {
@@ -75,6 +86,8 @@ class _AddPageState extends State<AddPage> {
                               }
                             });
                           },
+                          isInFav:
+                              user.favouritExerciseList.contains(exerciseData),
                           isAdded: user.exerciseList.contains(exerciseData),
                           cardTitle: exerciseData.exerciseName,
                           cardImageUrl: exerciseData.exerciseImageUrl,

@@ -10,8 +10,8 @@ class User {
   final String description;
   int totlaExercisesCompleted;
   int totlaEquipmentHandedOver;
-  final List<ExerciseModle> exerciseList;
-  final List<ExerciseModle> favExerciseList;
+  List<ExerciseModle> exerciseList;
+  List<ExerciseModle> favouritExerciseList;
   final List<EquipmentModle> equipmentList;
   final List<EquipmentModle> favEquipmentList;
 
@@ -26,7 +26,7 @@ class User {
     required this.description,
     required this.exerciseList,
     required this.equipmentList,
-    required this.favExerciseList,
+    required this.favouritExerciseList,
     required this.favEquipmentList,
   });
 
@@ -40,5 +40,17 @@ class User {
 
   void removeExercise(ExerciseModle exeReomove) {
     exerciseList.remove(exeReomove);
+  }
+
+  //add favoirit
+
+  void addFavourit(ExerciseModle exercise) {
+    favouritExerciseList.add(exercise);
+  }
+
+  //remove favourit
+
+  void removeFavourit(ExerciseModle exFav) {
+    favouritExerciseList.remove(exFav);
   }
 }
