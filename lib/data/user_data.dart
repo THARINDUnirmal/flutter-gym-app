@@ -49,13 +49,6 @@ User user = User(
   ],
   favouritExerciseList: [
     ExerciseModle(
-      exerciseName: "Plank",
-      exerciseImageUrl: "assets/images/equipments/dumbbell.png",
-      noOfMinuites: 30,
-      id: 2,
-      completed: false,
-    ),
-    ExerciseModle(
       exerciseName: "Squats",
       exerciseImageUrl: "assets/images/exercises/downward-facing.png",
       noOfMinuites: 20,
