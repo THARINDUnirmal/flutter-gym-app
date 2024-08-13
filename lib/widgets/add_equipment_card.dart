@@ -7,6 +7,10 @@ class AddEquipmentCard extends StatefulWidget {
   final String equipmentDescription;
   final int numberOfMuinits;
   final double numberOfCal;
+  final bool isAddEquipment;
+  final bool isFavouritEquipment;
+  final void Function() addEquipment;
+  final void Function() addFavouritEquipment;
 
   const AddEquipmentCard({
     super.key,
@@ -15,6 +19,10 @@ class AddEquipmentCard extends StatefulWidget {
     required this.equipmentDescription,
     required this.numberOfMuinits,
     required this.numberOfCal,
+    required this.addEquipment,
+    required this.addFavouritEquipment,
+    required this.isAddEquipment,
+    required this.isFavouritEquipment,
   });
 
   @override
@@ -96,9 +104,11 @@ class _AddEquipmentCardState extends State<AddEquipmentCard> {
                 ),
                 child: Center(
                   child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.add,
+                    onPressed: () {
+                      widget.addEquipment();
+                    },
+                    icon: Icon(
+                      widget.isAddEquipment ? Icons.remove : Icons.add,
                       size: 30,
                       color: Colors.blue,
                     ),
@@ -114,9 +124,13 @@ class _AddEquipmentCardState extends State<AddEquipmentCard> {
                 ),
                 child: Center(
                   child: IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.favorite_border,
+                    onPressed: () {
+                      widget.addFavouritEquipment();
+                    },
+                    icon: Icon(
+                      widget.isFavouritEquipment
+                          ? Icons.favorite
+                          : Icons.favorite_border,
                       size: 30,
                       color: Colors.pink,
                     ),

@@ -10,8 +10,8 @@ class User {
   final String description;
   int totlaExercisesCompleted;
   int totlaEquipmentHandedOver;
-  List<ExerciseModle> exerciseList;
-  List<ExerciseModle> favouritExerciseList;
+  final List<ExerciseModle> exerciseList;
+  final List<ExerciseModle> favouritExerciseList;
   final List<EquipmentModle> equipmentList;
   final List<EquipmentModle> favEquipmentList;
 
@@ -52,5 +52,29 @@ class User {
 
   void removeFavourit(ExerciseModle exFav) {
     favouritExerciseList.remove(exFav);
+  }
+
+  //add Equipment in list
+
+  void addEquipmentData(EquipmentModle equipmentData) {
+    equipmentList.add(equipmentData);
+  }
+
+  //remove Equipment in list
+
+  void removeEquipmenData(EquipmentModle equipmentData) {
+    equipmentList.remove(equipmentData);
+  }
+
+  //add to favourit Equipment
+
+  void addFavouritEquipment(EquipmentModle equipmentData) {
+    favEquipmentList.add(equipmentData);
+  }
+
+  //remove to favourit Equipment
+
+  void removeFavouritEquipment(EquipmentModle equipmentData) {
+    favEquipmentList.remove(equipmentData);
   }
 }

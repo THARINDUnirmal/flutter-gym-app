@@ -113,10 +113,33 @@ class _AddPageState extends State<AddPage> {
                   height: 300,
                   width: double.infinity,
                   child: ListView.builder(
+                    scrollDirection: Axis.vertical,
                     itemCount: equipmentList.length,
                     itemBuilder: (context, index) {
                       EquipmentModle equipmenData = equipmentList[index];
                       return AddEquipmentCard(
+                        addEquipment: () {
+                          setState(() {
+                            if (user.equipmentList.contains(equipmenData)) {
+                              user.removeEquipmenData(equipmenData);
+                            } else {
+                              user.addEquipmentData(equipmenData);
+                            }
+                          });
+                        },
+                        addFavouritEquipment: () {
+                          setState(() {
+                            if (user.favEquipmentList.contains(equipmenData)) {
+                              user.removeFavouritEquipment(equipmenData);
+                            } else {
+                              user.addFavouritEquipment(equipmenData);
+                            }
+                          });
+                        },
+                        isFavouritEquipment:
+                            user.favEquipmentList.contains(equipmenData),
+                        isAddEquipment:
+                            user.equipmentList.contains(equipmenData),
                         equipmentName: equipmenData.equipmentName,
                         equipmentDescription: equipmenData.equipmentDescription,
                         equipmentImage: equipmenData.equipmentImageUrl,
@@ -125,7 +148,7 @@ class _AddPageState extends State<AddPage> {
                       );
                     },
                   ),
-                )
+                ),
               ],
             ),
           ),
