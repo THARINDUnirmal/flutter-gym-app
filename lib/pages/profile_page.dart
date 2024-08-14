@@ -64,38 +64,38 @@ class _ProfilePageState extends State<ProfilePage> {
                     borderRadius: BorderRadius.circular(20),
                     color: kEquipmentCardFilltColor,
                   ),
-                  child: const Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Total minuites Spend :50",
-                        style: TextStyle(
+                        "Total minuites Spend :${user.calculateNoOfMinuites().toString()}",
+                        style: const TextStyle(
                           fontSize: 23,
                           fontWeight: FontWeight.w600,
                           color: klinerGredientColor2,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Text(
-                        "Total Exercises completed :5",
-                        style: TextStyle(
+                        "Total Exercises(Added) : ${user.exerciseList.length}",
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
                       Text(
-                        "Total Equipments completed :5",
-                        style: TextStyle(
+                        "Total Equipments now use : ${user.equipmentList.length}",
+                        style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.normal,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                     ],

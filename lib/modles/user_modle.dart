@@ -1,3 +1,6 @@
+import 'package:gym_app/data/exercise_data.dart';
+import 'package:gym_app/data/user_data.dart';
+
 import 'package:gym_app/modles/equipment_modle.dart';
 import 'package:gym_app/modles/exercise_modle.dart';
 
@@ -76,5 +79,34 @@ class User {
 
   void removeFavouritEquipment(EquipmentModle equipmentData) {
     favEquipmentList.remove(equipmentData);
+  }
+
+  //calculate total spend minuites
+
+  int calculateNoOfMinuites() {
+    int total = 0;
+    for (var i in exerciseList) {
+      total += i.noOfMinuites;
+    }
+
+    //Equipment total spend minuites
+    for (var a in equipmentList) {
+      total += a.noOfMinuites;
+    }
+    return total;
+  }
+
+  //total Exercise
+  int totalExercise() {
+    int total = 0;
+    total = user.exerciseList.length;
+    return total;
+  }
+
+  //total Equipment
+  int totalEquipment() {
+    int total = 0;
+    total = user.equipmentList.length;
+    return total;
   }
 }

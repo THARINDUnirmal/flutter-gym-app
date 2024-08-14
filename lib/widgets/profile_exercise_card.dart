@@ -47,13 +47,15 @@ class _ProfileExerciseCardState extends State<ProfileExerciseCard> {
           ),
           const Spacer(),
           IconButton(
-              onPressed: () {
-                widget.removeData();
-              },
-              icon: const Icon(
-                Icons.mark_chat_read,
-                size: 30,
-              ))
+            onPressed: () {
+              widget.removeData();
+            },
+            icon: const Icon(
+              Icons.check,
+              size: 30,
+              color: Color.fromARGB(255, 70, 239, 9),
+            ),
+          ),
         ],
       ),
     );
