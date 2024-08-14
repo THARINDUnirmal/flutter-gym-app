@@ -57,9 +57,9 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 20,
                 ),
-                const ProgressCard(
+                ProgressCard(
                   total: 100,
-                  progress: 0.6,
+                  progress: user.progressValue(),
                 ),
                 const SizedBox(
                   height: 20,

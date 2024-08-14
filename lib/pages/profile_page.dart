@@ -49,8 +49,8 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                const ProgressCard(
-                  progress: 0.5,
+                ProgressCard(
+                  progress: user.progressValue(),
                   total: 100,
                 ),
                 const SizedBox(

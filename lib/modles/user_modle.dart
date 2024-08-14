@@ -96,17 +96,25 @@ class User {
     return total;
   }
 
-  //total Exercise
-  int totalExercise() {
-    int total = 0;
-    total = user.exerciseList.length;
-    return total;
-  }
+  //progress calculation
+  double progressValue() {
+    double totalCalarise = 0;
 
-  //total Equipment
-  int totalEquipment() {
-    int total = 0;
-    total = user.equipmentList.length;
-    return total;
+    for (var calarise in equipmentList) {
+      totalCalarise += calarise.noOfCalories;
+    }
+
+    if (totalCalarise > 0 && totalCalarise <= 10) {
+      totalCalarise = totalCalarise / 10; //example: 5 -- 5/10= 0.5
+    }
+
+    if (totalCalarise > 0 && totalCalarise <= 100) {
+      totalCalarise = totalCalarise / 100; //example: 10 -- 10/100= 0.1
+    }
+
+    if (totalCalarise > 0 && totalCalarise <= 1000) {
+      totalCalarise = totalCalarise / 1000; // example: 300 -- 150/1000=0.3
+    }
+    return totalCalarise;
   }
 }
