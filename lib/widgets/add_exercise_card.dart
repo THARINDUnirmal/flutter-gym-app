@@ -4,6 +4,7 @@ import 'package:gym_app/utils/colors.dart';
 class AddExerciseCard extends StatefulWidget {
   final String cardTitle;
   final String cardImageUrl;
+  final String noOfMinuites;
   final bool isAdded;
   final bool isInFav;
   final void Function() addMethord;
@@ -17,6 +18,7 @@ class AddExerciseCard extends StatefulWidget {
     required this.addMethord,
     required this.addFavourit,
     required this.isInFav,
+    required this.noOfMinuites,
   });
 
   @override
@@ -52,6 +54,16 @@ class _AddExerciseCardState extends State<AddExerciseCard> {
             widget.cardImageUrl,
             width: 100,
             fit: BoxFit.cover,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            "${widget.noOfMinuites} mins of workout",
+            style: TextStyle(
+                fontSize: 15,
+                color: klinerGredientColor1,
+                fontWeight: FontWeight.w600),
           ),
           const SizedBox(
             height: 10,
