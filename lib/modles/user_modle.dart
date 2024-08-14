@@ -1,6 +1,3 @@
-import 'package:gym_app/data/exercise_data.dart';
-import 'package:gym_app/data/user_data.dart';
-
 import 'package:gym_app/modles/equipment_modle.dart';
 import 'package:gym_app/modles/exercise_modle.dart';
 
